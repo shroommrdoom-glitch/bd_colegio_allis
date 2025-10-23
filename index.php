@@ -20,7 +20,7 @@ if ($conn) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLEGIO</title>
+    <title>Citas en consultorio nutrición</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
 </head>
@@ -41,7 +41,7 @@ if ($conn) {
             <div class="header">
                 <div class="logo">
                     <img src="logo.jpg" alt="Logotipo de tu empresa" style="width:300px; height:200px;">
-                    <h1>COLEGIO</h1>
+                    <h1>CITAS NUTRICIÓN</h1>
                 </div>
             </div>
 
@@ -74,12 +74,12 @@ if ($conn) {
                     </tr>
                     <?php foreach ($alumnos as $alumno): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($alumno['id_alumno']); ?></td>
+                            <td><?php echo htmlspecialchars($alumno['id']); ?></td>
                             <td><?php echo htmlspecialchars($alumno['nombre']); ?></td>
                             <td><?php echo htmlspecialchars($alumno['apellido']); ?></td>
                             <td><?php echo htmlspecialchars($alumno['correo']); ?></td>
-                            <td><?php echo htmlspecialchars($alumno['elefono']); ?></td>
-                            <td><?php echo htmlspecialchars($alumno['fecha_de_nacimiento']); ?></td>
+                            <td><?php echo htmlspecialchars($alumno['telefono']); ?></td>
+                            <td><?php echo htmlspecialchars($alumno['fecha_nacimiento']); ?></td>
                             <td><?php echo htmlspecialchars($alumno['ciudad']); ?></td>
                             <td><?php echo htmlspecialchars($alumno['promedio']); ?></td>
                         </tr>
