@@ -8,7 +8,7 @@ if ($conn) {
     $conexion_exitosa = true;
 
     try {
-        $stmt = $conn->query("SELECT * FROM alumnos");
+        $stmt = $conn->query("SELECT * FROM personas");
         $alumnos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo "Error al consultar la base de datos: " . $e->getMessage();
@@ -20,7 +20,7 @@ if ($conn) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citas en consultorio nutrición</title>
+    <title>COLEGIO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
 </head>
@@ -41,7 +41,7 @@ if ($conn) {
             <div class="header">
                 <div class="logo">
                     <img src="logo.jpg" alt="Logotipo de tu empresa" style="width:300px; height:200px;">
-                    <h1>CITAS NUTRICIÓN</h1>
+                    <h1>COLEGIO</h1>
                 </div>
             </div>
 
