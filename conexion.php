@@ -1,14 +1,15 @@
 <?php
-$servidor = "localhost";
-$usuario = "sadboyz";
-$password = "SPKDENJI27/_/";
-$basedatos = "sadboyz_bd_colegio"; 
-//mysql -h mysql-sadboyz.alwaysdata.net -u sadboyz -p sadboyz_bd_colegio
+$host = "mysql-sadboyz.alwaysdata.net"; 
+$database = "sadboyz_bd_colegio_allis"; 
+$username = "sadboyz"; 
+$password = "SPKDENJI27/_/"; 
+//mysql -h mysql-sadboyz.alwaysdata.net -u sadboyz -p sadboyz_bd_colegio_allis
 try {
-    $conn = new PDO("mysql:host=$servidor;dbname=$basedatos;charset=utf8", $usuario, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Conexión exitosa";
 } catch(PDOException $e) {
-    $conn = null;
     echo "Error de conexión: " . $e->getMessage();
 }
 ?>
